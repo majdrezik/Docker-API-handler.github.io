@@ -14,8 +14,8 @@ A docker that runs a node.js server handling simple API requests.
   -  Link to my DockerHub: https://hub.docker.com/r/majdrezik/simple-api-handler
   
  ### After you have the image on your machine, on the Terminal, run the container via:
-    - `docker run -it -p 8088:8088 majdrezik/simple-api-handler `
-    - `open your browser and go to localhost:8088 `
+    docker run -it -p 8088:8088 majdrezik/simple-api-handler
+    open your browser and go to localhost:8088
      
      ENJOY!
   

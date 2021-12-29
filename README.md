@@ -11,7 +11,7 @@ A docker that runs a node.js server handling simple API requests.
  
  ### pull the project to your machine via Terminal (or cmd):
   - `docker pull majdrezik/simple_api_handler`
-  - Link to my DockerHub: https://hub.docker.com/repository/docker/majdrezik/simple_api_handler/general
+  -  Link to my DockerHub: https://hub.docker.com/repository/docker/majdrezik/simple_api_handler/general
   
  ### After you have the image on your machine, on the Terminal, run the container via:
      - `docker run -it -p <CHOOSE_HOST_PORT>:5555 majdrezik/simple_api_handler`

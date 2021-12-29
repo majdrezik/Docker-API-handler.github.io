@@ -9,9 +9,11 @@ A docker that runs a node.js server handling simple API requests.
    
 ## Running the Application
  
- ### pull the project to your machine with Terminal (or cmd):
-  - `docker pull majdrezik/simple_api_handler:docker-api`
+ ### pull the project to your machine via Terminal (or cmd):
+  - `docker pull majdrezik/simple_api_handler`
   - Link to my DockerHub: https://hub.docker.com/repository/docker/majdrezik/simple_api_handler/general
   
+ ### After you have the image on your machine, run the image via:
+     `docker 
   
   

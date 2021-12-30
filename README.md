@@ -1,7 +1,7 @@
 # Docker-simple-API-handler
 A docker that runs a node.js server handling simple API requests.
      
-   1) /           -   returns an index.html file with available APIs to use. 
+   1) `/           -   returns an index.html file with available APIs to use.`
    2) /dynamic    -   a dynamic parameter / value provided when the image is built.
    3) /dockerfile -   provides the dockerfile the image was created with (in the image).
    4) /creation   -   provides the time the image was built. 

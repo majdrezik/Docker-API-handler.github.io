@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello from Docker</title>
+
+<h3 style="font-family: arial, sans-serif;">Available APIs</h3>
+
+
+</head>
+<body>
+
+    
+<table>
+    <tr>
+        <th>Path</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>/</td>
+        <td>webpage. (You are here)</td>
+    </tr>
+    <tr>
+        <td>/creation</td>
+        <td>provides the time the image was built.</td>
+    </tr>
+    <tr>
+        <td>/dynamic</td>
+        <td>dynamic parameters provided when the image is built.</td>
+    </tr>
+    <tr>
+        <td>/dockerfile</td>
+        <td>provides the dockerfile the image was created with (in the image).</td>
+    </tr>
+    
+
+
+</table>
+</body>
+</html>

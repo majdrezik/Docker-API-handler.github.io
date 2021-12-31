@@ -16,13 +16,16 @@ app.get('/creation', (req, res) => {
     
     fs.readFile('date.txt', function(error, data){
         if(error){
-         res.writeHead(404)
-         res.write('Error: File Not Found!')
-     } else {
-        res.writeHead(200, {'Content-Type': 'text/html' })
-        res.write(data) //all the info inside date.txt file
+            res.writeHead(404)
+            res.write('Error: File Not Found!')
+        } else {
+            res.writeHead(200, {'Content-Type': 'text/html' })
+            res.write(data) //all the info inside date.txt file
         }
-    })
+        res.end() 
+    }
+        
+    )
 })
 
 
@@ -32,8 +35,9 @@ app.get('/creation', (req, res) => {
  */
 app.get('/dynamic', (req, res) => {
     res.status(200 ).send({
-        return: 'dynamic'
+        return: 'dynamic' 
     })
+    res.end()
 })
 
 /**
@@ -50,6 +54,7 @@ app.get('/dockerfile', (req, res) => {
         res.writeHead(200, {'Content-Type': 'text/html' })
         res.write(data) //all the info inside Dockerfile
         }
+        res.end() 
     })
 
 
@@ -66,5 +71,6 @@ app.get('/', (req, res) => {
          res.writeHead(200, {'Content-Type': 'text/html' })
          res.write(data) //all the info inside index.html
         }
+        res.end() 
     })
  })

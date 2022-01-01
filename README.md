@@ -6,7 +6,7 @@ A docker that runs a node.js server handling simple API requests.
    3) `/dockerfile -   provides the dockerfile the image was created with (in the image).`
    4) `/creation   -   provides the time the image was built.` 
    
-   
+#
 ## Running the Application
  
  ### pull the project to your machine via Terminal (or cmd):
@@ -17,6 +17,7 @@ A docker that runs a node.js server handling simple API requests.
  - `docker run -it -p 8088:8088 majdrezik/simple-api-handler`
  - `open your browser and go to localhost:8088`
 
+#
 ## Stopping the Application
 
  ### After you're done with running the app, you can stop the container via the following steps:

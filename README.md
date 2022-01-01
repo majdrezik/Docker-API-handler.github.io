@@ -10,11 +10,11 @@ A docker that runs a node.js server handling simple API requests.
 ## Running the Application
 
  
- ### pull the project to your machine via Terminal (or cmd):
+### pull the project to your machine via Terminal (or cmd):
   - `docker pull majdrezik/simple-api-handler` 
   -  Link to my DockerHub: https://hub.docker.com/r/majdrezik/simple-api-handler
   
- ### After you have the image on your machine, on the Terminal, run the container via:
+### After you have the image on your machine, on the Terminal, run the container via:
  - `docker run -it -p 8088:8088 majdrezik/simple-api-handler`
  - `open your browser and go to localhost:8088`
 
@@ -22,7 +22,7 @@ A docker that runs a node.js server handling simple API requests.
 ## Stopping the Application
 
 
- ### After you're done with running the app, you can stop the container via the following steps:
+### After you're done with running the app, you can stop the container via the following steps:
 - Open a new terminal window. (Or a new CMD if you're working with CMD).
 - Type:
 `docker ps`
@@ -30,10 +30,8 @@ A docker that runs a node.js server handling simple API requests.
 - Type the following command:
 `docker container stop CONTAINER_ID` where CONTAINER_ID is the value you've copied.
 
-   
-    
 #     
- ### Take a look at the Collection on Postman
+### Take a look at the Collection on Postman
  - https://www.getpostman.com/collections/34d6ec329f993bd20f51
    
 #   

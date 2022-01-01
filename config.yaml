@@ -1,0 +1,7 @@
+services:
+  galil_api: # --name galil_api
+    image: galil_dotenv #image name
+    ports:
+      - 8088:8088
+    environment:
+      - DATE=

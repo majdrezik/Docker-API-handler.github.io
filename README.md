@@ -17,7 +17,11 @@ A docker that runs a node.js server handling simple API requests.
  - `docker run -it -p 8088:8088 majdrezik/simple-api-handler`
  - `open your browser and go to localhost:8088`
      
-     ENJOY!
-  
-  ![image](https://user-images.githubusercontent.com/39953455/147714040-96fd3d49-e069-402f-b798-ea0f335eb329.png)
+#     
+ ### Take a look at the Collection on Postman
+ - https://www.getpostman.com/collections/34d6ec329f993bd20f51
+   
+#   
+![image](https://user-images.githubusercontent.com/39953455/147858936-a808abc5-4f17-429f-a60f-dd261019d449.png)
+
 

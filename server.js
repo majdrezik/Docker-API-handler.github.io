@@ -28,7 +28,6 @@ app.get("/creation", (req, res) => {
       //delete after
       console.log(getEnvValue("DATE"));
       console.log(data.toString());
-      console.log(process.env.DATE === undefined ? "true" : "false");
     }
     res.end();
   });
@@ -52,7 +51,7 @@ const setEnvValue = (key, value) => {
     envVars.splice(targetLineIndex, 1, `${key}="${value}"`);
   } else {
     // create new key value
-    envVars.push(`${key}=${value}`);
+    envVars.push(`${key}="${value}"`);
   }
   // write everything back to the file system
   fs.writeFileSync(envFilePath, envVars.join(os.EOL));

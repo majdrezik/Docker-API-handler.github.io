@@ -10,12 +10,18 @@ const envFilePath = path.resolve(__dirname, ".env");
 // read .env file & convert to array
 const readEnvVars = () => fs.readFileSync(envFilePath, "utf-8").split(os.EOL);
 
+/**
+ * start the server on port 8088
+ */
 app.listen(PORT, () => {
   console.log(`\n\nit's alive on http://localhost:${PORT}`);
-  // console.log(process.env.DATE = 1111)
 });
 
-// /creation - provides the time the image was built
+/**
+ *  /creation - provides the time the image was built
+ * @param {Request<{}, any, any, qs.ParsedQs, Record<string, any>>} req
+ * @param {Response<any, Record<string, any>, number>} res
+ */
 app.get("/creation", (req, res) => {
   fs.readFile("date.txt", function (error, data) {
     if (error) {
@@ -25,8 +31,6 @@ app.get("/creation", (req, res) => {
       setEnvValue("DATE", data);
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write(`Image Creation Date: ${getEnvValue("DATE")}`); //all the info inside date.txt file
-      //delete after
-      console.log(getEnvValue("DATE"));
       console.log(data.toString());
     }
     res.end();
@@ -34,6 +38,11 @@ app.get("/creation", (req, res) => {
   console.log("/creation is called.");
 });
 
+/**
+ * returns the value of the environment key. if the key is undefined, it returns null.
+ * @param {String} key 
+ * @returns {String} environmentValue
+ */
 const getEnvValue = (key) => {
   // find the line that contains the key (exact match)
   const matchedLine = readEnvVars().find((line) => line.split("=")[0] == key); //deleted one =
@@ -41,6 +50,11 @@ const getEnvValue = (key) => {
   return matchedLine !== undefined ? matchedLine.split("=")[1] : null;
 };
 
+/**
+ * sets a new Key-Value pair in the '.env' file
+ * @param {String} key 
+ * @param {String} value 
+ */
 const setEnvValue = (key, value) => {
   const envVars = readEnvVars();
   const targetLine = envVars.find((line) => line.split("=")[0] === key);
@@ -50,7 +64,7 @@ const setEnvValue = (key, value) => {
     // replace the key/value with the new value
     envVars.splice(targetLineIndex, 1, `${key}="${value}"`);
   } else {
-    // create new key value
+    // create new key-value
     envVars.push(`${key}="${value}"`);
   }
   // write everything back to the file system
@@ -60,6 +74,8 @@ const setEnvValue = (key, value) => {
 
 /**
  *  dynamic parameters / value provided when the image is built
+ * @param {Request<{}, any, any, qs.ParsedQs, Record<string, any>>} req
+ * @param {Response<any, Record<string, any>, number>} res
  */
 app.get("/dynamic", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
@@ -70,10 +86,11 @@ app.get("/dynamic", (req, res) => {
 });
 
 /**
- *  provides the dockerfile the image was created with (in the image)
+ * provides the dockerfile the image was created with (in the image)
+ * @param {Request<{}, any, any, qs.ParsedQs, Record<string, any>>} req
+ * @param {Response<any, Record<string, any>, number>} res
  */
 app.get("/dockerfile", (req, res) => {
-  //res.sendFile(path.join(__dirname, "Dockerfile"))
 
   fs.readFile("Dockerfile", function (error, data) {
     if (error) {
@@ -88,7 +105,12 @@ app.get("/dockerfile", (req, res) => {
   });
 });
 
-// returns the index.html file
+
+/**
+ * returns the index.html file
+ * @param {Request<{}, any, any, qs.ParsedQs, Record<string, any>>} req
+ * @param {Response<any, Record<string, any>, number>} res
+ */
 app.get("/", (req, res) => {
   fs.readFile("index.html", function (error, data) {
     if (error) {

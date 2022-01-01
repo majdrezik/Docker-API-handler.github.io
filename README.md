@@ -20,12 +20,12 @@ A docker that runs a node.js server handling simple API requests.
 ## Stopping the Application
 
  ### After you're done with running the app, you can stop the container via the following steps:
-     - Open a new terminal window. (Or a new CMD if you're working with CMD).
-     - Type:
-     `docker ps`
-     - You will see the information about the running containers. COPY the {CONTAINER ID} value (i.e. d8af1bf893d4)
-     - Type the following command:
-     `docker container stop CONTAINER_ID` where CONTAINER_ID is the value you've copied.
+- Open a new terminal window. (Or a new CMD if you're working with CMD).
+- Type:
+`docker ps`
+- You will see the information about the running containers. COPY the {CONTAINER ID} value (i.e. d8af1bf893d4)
+- Type the following command:
+`docker container stop CONTAINER_ID` where CONTAINER_ID is the value you've copied.
 
    
     

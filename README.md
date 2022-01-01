@@ -8,6 +8,7 @@ A docker that runs a node.js server handling simple API requests.
    
 #
 ## Running the Application
+
  
  ### pull the project to your machine via Terminal (or cmd):
   - `docker pull majdrezik/simple-api-handler` 
@@ -19,6 +20,7 @@ A docker that runs a node.js server handling simple API requests.
 
 #
 ## Stopping the Application
+
 
  ### After you're done with running the app, you can stop the container via the following steps:
 - Open a new terminal window. (Or a new CMD if you're working with CMD).

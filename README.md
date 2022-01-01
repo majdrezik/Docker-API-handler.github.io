@@ -21,6 +21,7 @@ A docker that runs a node.js server handling simple API requests.
  ### Take a look at the Collection on Postman
  - https://www.getpostman.com/collections/34d6ec329f993bd20f51
    
-  ![image](https://user-images.githubusercontent.com/39953455/147858386-d1e37ca6-56b9-4d91-97e6-d62ea87179ec.png)
+#   
+![image](https://user-images.githubusercontent.com/39953455/147858936-a808abc5-4f17-429f-a60f-dd261019d449.png)
 
 

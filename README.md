@@ -18,6 +18,7 @@ A docker that runs a node.js server handling simple API requests.
  - `open your browser and go to localhost:8088`
      
      ENJOY!
-  
-  ![image](https://user-images.githubusercontent.com/39953455/147714040-96fd3d49-e069-402f-b798-ea0f335eb329.png)
+    
+  ![image](https://user-images.githubusercontent.com/39953455/147858386-d1e37ca6-56b9-4d91-97e6-d62ea87179ec.png)
+
 
